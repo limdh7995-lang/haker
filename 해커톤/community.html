@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정보참여마당 | 울산 맞춤형 주거 서비스</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="메인 홈페이지로 이동">
+        <img class="logo-mark" src="울산로고.jpg" alt="울산시 로고" />
+        <span class="brand-text">맞춤형 주거 서비스</span>
+      </a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="region.html">울산 지역 설명</a>
+        <a href="community.html">정보참여마당</a>
+        <a href="support.html">고객센터</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <div class="section-head">
+          <p class="eyebrow">Community</p>
+          <h1 class="page-title">정보참여마당</h1>
+        </div>
+        <div class="community-layout">
+          <form class="post-form" id="postForm">
+            <h2>게시글 작성</h2>
+            <label>
+              제목
+              <input id="postTitle" type="text" placeholder="예: 신혼부부 추천 지역이 궁금해요" required />
+            </label>
+            <label>
+              내용
+              <textarea id="postBody" rows="5" placeholder="궁금한 점이나 지역 정보를 적어주세요." required></textarea>
+            </label>
+            <button type="submit">작성하기</button>
+          </form>
+
+          <div class="post-list" aria-live="polite">
+            <h2>게시글 목록</h2>
+            <ul id="posts">
+              <li>
+                <strong>대중교통 이용이 편한 지역 추천 부탁드립니다</strong>
+                <span>버스 노선과 상권이 가까운 곳을 찾고 있어요.</span>
+              </li>
+              <li>
+                <strong>초등학교 근처 주거지 정보 공유</strong>
+                <span>가족 단위 거주에 적합한 생활권 정보를 모으고 있습니다.</span>
+              </li>
+              <li>
+                <strong>바다와 가까운 동네 생활 후기</strong>
+                <span>동구와 북구 해안 생활권의 장단점이 궁금합니다.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#privacy">개인정보처리지침</a>
+      <a href="#terms">이용약관</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
