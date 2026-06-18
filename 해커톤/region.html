@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>울산 지역 설명 | 울산 맞춤형 주거 서비스</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="메인 홈페이지로 이동">
+        <img class="logo-mark" src="울산로고.jpg" alt="울산시 로고" />
+        <span class="brand-text">맞춤형 주거 서비스</span>
+      </a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="region.html">울산 지역 설명</a>
+        <a href="community.html">정보참여마당</a>
+        <a href="support.html">고객센터</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <div class="section-head">
+          <p class="eyebrow">Ulsan Area</p>
+          <h1 class="page-title">울산 지역 설명</h1>
+        </div>
+        <div class="wide-photo" role="img" aria-label="울산의 도시와 바다 풍경">
+          <div>
+            <strong>산업, 바다, 도심이 함께 있는 도시</strong>
+            <span>중구, 남구, 동구, 북구, 울주군의 생활권을 비교해 보세요.</span>
+          </div>
+        </div>
+        <article class="map-panel">
+          <div class="map-description">
+            <h2>울산광역시 행정구역</h2>
+            <div class="district-tabs" aria-label="행정구역 설명 선택">
+              <button type="button" class="district-tab active" data-district="all">전체</button>
+              <button type="button" class="district-tab" data-district="jung">중구</button>
+              <button type="button" class="district-tab" data-district="nam">남구</button>
+              <button type="button" class="district-tab" data-district="dong">동구</button>
+              <button type="button" class="district-tab" data-district="buk">북구</button>
+              <button type="button" class="district-tab" data-district="ulju">울주군</button>
+            </div>
+            <p id="districtDescription" class="district-description">
+              울산은 4개 구와 1개 군으로 구성되어 있으며, 주거 환경은 해안 생활권, 도심 생활권,
+              산업단지 인접 생활권, 자연 친화 생활권 등으로 다양하게 나뉩니다.
+            </p>
+          </div>
+          <div class="district-map">
+            <img src="울산 지도.png" alt="울산광역시 행정구역 지도" />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#privacy">개인정보처리지침</a>
+      <a href="#terms">이용약관</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

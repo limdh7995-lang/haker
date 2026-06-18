@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고객센터 | 울산 맞춤형 주거 서비스</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="메인 홈페이지로 이동">
+        <img class="logo-mark" src="울산로고.jpg" alt="울산시 로고" />
+        <span class="brand-text">맞춤형 주거 서비스</span>
+      </a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="region.html">울산 지역 설명</a>
+        <a href="community.html">정보참여마당</a>
+        <a href="support.html">고객센터</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <div class="section-head">
+          <p class="eyebrow">Help Center</p>
+          <h1 class="page-title">고객센터</h1>
+        </div>
+        <div class="support-layout">
+          <div class="faq">
+            <h2>자주 묻는 질문</h2>
+            <details open>
+              <summary>맞춤 주거 지역 추천은 어떻게 이용하나요?</summary>
+              <p>메인 화면의 버튼을 눌러 울산 지역 설명을 확인한 뒤 원하는 생활권 정보를 비교할 수 있습니다.</p>
+            </details>
+            <details>
+              <summary>게시글은 누구나 작성할 수 있나요?</summary>
+              <p>현재 시연 페이지에서는 로그인 없이 게시글 목록에 새 글을 추가할 수 있습니다.</p>
+            </details>
+            <details>
+              <summary>상담 답변은 어디에서 확인하나요?</summary>
+              <p>1:1 문의 기능은 접수 화면까지만 구현되어 있으며 실제 답변 기능은 추후 연동 대상입니다.</p>
+            </details>
+          </div>
+
+          <form class="inquiry-form" id="inquiryForm">
+            <h2>1:1 문의</h2>
+            <label>
+              이름
+              <input type="text" placeholder="이름" required />
+            </label>
+            <label>
+              이메일
+              <input type="email" placeholder="example@email.com" required />
+            </label>
+            <label>
+              문의 내용
+              <textarea rows="5" placeholder="문의 내용을 입력해주세요." required></textarea>
+            </label>
+            <button type="submit">문의 접수</button>
+            <p class="form-message" id="inquiryMessage" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#privacy">개인정보처리지침</a>
+      <a href="#terms">이용약관</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

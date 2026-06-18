@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>맞춤 주거 지역 찾아보기 | 울산 맞춤형 주거 서비스</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="page-section recommend-section">
+        <div class="section-head">
+          <p class="eyebrow">Housing Match</p>
+          <h1 class="page-title">맞춤 주거 지역 찾아보기</h1>
+        </div>
+
+        <nav class="recommend-tabs" aria-label="추천 방식 선택">
+          <button type="button" class="recommend-tab active" data-method="weight">점수 방식</button>
+          <button type="button" class="recommend-tab" data-method="survey">맞춤형 설문</button>
+          <button type="button" class="recommend-tab" data-method="type">유형별 추천</button>
+          <button type="button" class="recommend-tab" data-method="distance">거리 기반</button>
+          <button type="button" class="recommend-tab" data-method="ai">AI 추천</button>
+        </nav>
+
+        <div class="recommend-layout">
+          <section class="recommend-panel active" data-panel="weight">
+            <div class="panel-head">
+              <h2>점수 방식</h2>
+              <p>원하는 조건의 중요도를 조절하면 점수 합산으로 주거지를 추천합니다.</p>
+            </div>
+            <div class="control-grid">
+              <label>
+                <span class="range-head"><span>교통</span><output data-weight-value="traffic">0</output></span>
+                <input type="range" min="0" max="100" value="0" data-weight="traffic" />
+                <span class="data-example">버스정류장, 도로, 통근거리</span>
+              </label>
+              <label>
+                <span class="range-head"><span>일자리</span><output data-weight-value="job">0</output></span>
+                <input type="range" min="0" max="100" value="0" data-weight="job" />
+                <span class="data-example">산업단지, 회사 밀집도</span>
+              </label>
+              <label>
+                <span class="range-head"><span>집값</span><output data-weight-value="housing">0</output></span>
+                <input type="range" min="0" max="100" value="0" data-weight="housing" />
+                <span class="data-example">월세, 전세, 매매가 부담</span>
+              </label>
+              <label>
+                <span class="range-head"><span>생활편의</span><output data-weight-value="life">0</output></span>
+                <input type="range" min="0" max="100" value="0" data-weight="life" />
+                <span class="data-example">병원, 마트, 도서관, 공원</span>
+              </label>
+              <label>
+                <span class="range-head"><span>주거안정</span><output data-weight-value="stability">0</output></span>
+                <input type="range" min="0" max="100" value="0" data-weight="stability" />
+                <span class="data-example">인구, 세대수, 밀집도</span>
+              </label>
+              <label>
+                <span class="range-head"><span>복지/청년정책</span><output data-weight-value="welfare">0</output></span>
+                <input type="range" min="0" max="100" value="0" data-weight="welfare" />
+                <span class="data-example">청년정책, 복지시설</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="recommend-panel" data-panel="survey">
+            <div class="panel-head">
+              <h2>사용자 맞춤형 설문 방식</h2>
+            </div>
+            <div class="survey-form">
+              <label>
+                직장 위치가 어디인가요?
+                <select data-survey="work">
+                  <option value="nam">울산시청/삼산/달동 근처</option>
+                  <option value="buk">현대자동차/북구 근처</option>
+                  <option value="dong">현대중공업/동구 근처</option>
+                  <option value="ulju">울주군 산업단지 근처</option>
+                </select>
+              </label>
+              <label>
+                대중교통이 중요한가요?
+                <select data-survey="traffic">
+                  <option value="high">매우 중요</option>
+                  <option value="middle">보통</option>
+                  <option value="low">덜 중요</option>
+                </select>
+              </label>
+              <label>
+                월세/전세 예산은 어느 정도인가요?
+                <select data-survey="budget">
+                  <option value="low">낮은 편</option>
+                  <option value="middle">보통</option>
+                  <option value="high">높은 편</option>
+                </select>
+              </label>
+              <label>
+                생활편의, 공원/자연, 상권 중 무엇이 중요한가요?
+                <select data-survey="amenity">
+                  <option value="life">생활편의</option>
+                  <option value="nature">공원/자연</option>
+                  <option value="market">상권</option>
+                </select>
+              </label>
+              <label>
+                조용한 동네와 번화가 중 무엇을 원하나요?
+                <select data-survey="mood">
+                  <option value="quiet">조용한 동네</option>
+                  <option value="busy">번화가</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <section class="recommend-panel" data-panel="type">
+            <div class="panel-head">
+              <h2>유형별 추천 방식</h2>
+              <p>사용자 유형을 선택하면 잘 맞는 지역을 바로 추천합니다.</p>
+            </div>
+            <div class="type-grid">
+              <button type="button" class="type-option active" data-type="young">취업 준비 청년</button>
+              <button type="button" class="type-option" data-type="car">자동차 산업 근로자</button>
+              <button type="button" class="type-option" data-type="ship">조선업 근로자</button>
+              <button type="button" class="type-option" data-type="family">가족 단위</button>
+              <button type="button" class="type-option" data-type="nature">자연/관광 선호</button>
+              <button type="button" class="type-option" data-type="oldtown">원도심 생활 선호</button>
+            </div>
+          </section>
+
+          <section class="recommend-panel" data-panel="distance">
+            <div class="panel-head">
+              <h2>거리 기반 추천 방식</h2>
+              <p>직장이나 학교 위치를 기준으로 가까운 주거지를 추천합니다.</p>
+            </div>
+            <div class="control-grid">
+              <label>
+                기준 위치
+                <select id="distanceBase">
+                  <option value="hyundaiCar">현대자동차</option>
+                  <option value="hyundaiShip">현대중공업</option>
+                  <option value="ulsanCityHall">울산시청/삼산동</option>
+                  <option value="koreaEnergy">울산역/KTX</option>
+                  <option value="university">울산대학교</option>
+                </select>
+              </label>
+              <label>
+                이동수단
+                <select id="distanceMode">
+                  <option value="car">자동차</option>
+                  <option value="transit">대중교통</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <section class="recommend-panel" data-panel="ai">
+            <div class="panel-head">
+              <h2>5. AI 추천 방식</h2>
+              <p>조건을 문장으로 입력하면 핵심 단어를 분석해 추천합니다.</p>
+            </div>
+            <label>
+              예시: 나는 20대 청년이고, 대중교통이 중요하고, 월세가 너무 비싸지 않았으면 좋겠어.
+              <textarea id="aiInput" rows="5">나는 20대 청년이고, 대중교통이 중요하고, 직장은 북구 쪽이야.</textarea>
+            </label>
+          </section>
+
+          <aside class="recommend-result" aria-live="polite">
+            <p class="eyebrow">Recommendation</p>
+            <h2 id="recommendTitle">추천 결과</h2>
+            <ol id="recommendList"></ol>
+            <p id="recommendReason" class="recommend-reason"></p>
+          </aside>
+        </div>
+        <div class="back-actions">
+          <a class="primary-button" href="index.html">돌아가기</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#privacy">개인정보처리지침</a>
+      <a href="#terms">이용약관</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
